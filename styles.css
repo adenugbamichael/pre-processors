@@ -1,7 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;800&display=swap");
 @font-face {
   font-family: "bookmania";
-  src: url("https://use.typekit.net/af/1dda7f/00000000000000007735e58d/30/l?subset_id=2&fvd=n6&v=3") format("woff2"), url("https://use.typekit.net/af/1dda7f/00000000000000007735e58d/30/d?subset_id=2&fvd=n6&v=3") format("woff"), url("https://use.typekit.net/af/1dda7f/00000000000000007735e58d/30/a?subset_id=2&fvd=n6&v=3") format("opentype");
+  src: url("https://use.typekit.net/af/1dda7f/00000000000000007735e58d/30/l?subset_id=2&fvd=n6&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/1dda7f/00000000000000007735e58d/30/d?subset_id=2&fvd=n6&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/1dda7f/00000000000000007735e58d/30/a?subset_id=2&fvd=n6&v=3")
+      format("opentype");
   font-display: auto;
   font-style: normal;
   font-weight: 600;
@@ -31,7 +35,10 @@ h2 {
   font-family: bookmania, Garamond;
 }
 
-.image-base, img:last-of-type, img:nth-of-type(2), img:first-of-type {
+.image-base,
+img:last-of-type,
+img:nth-of-type(2),
+img:first-of-type {
   width: 300px;
   height: 300px;
   object-fit: cover;
@@ -62,7 +69,8 @@ img:last-of-type {
 a {
   font-weight: 800;
 }
-a:link, a:visited {
+a:link,
+a:visited {
   color: #063474;
   text-decoration-style: dotted;
 }
@@ -74,13 +82,16 @@ a:focus {
   outline: none;
 }
 
-.callout, .error, .warning, .success {
+.callout,
+.error,
+.warning,
+.success {
   border: solid 1px;
   border-radius: 4px;
   padding: 0.5rem 1rem;
 }
 
-.success {
+/* .success {
   background-color: #f6f9d1;
   border-color: #747d10;
 }
@@ -88,19 +99,50 @@ a:focus {
   content: "success: ";
   text-transform: capitalize;
   font-weight: 500;
-}
+} */
 
 .warning {
   background-color: #fff1dc;
   border-color: #fc9d03;
+  font-size: 0.8rem;
 }
 .warning::before {
-  content: "warning: ";
+  content: "Note: ";
   text-transform: capitalize;
   font-weight: 500;
 }
 
-.error {
+.react {
+  font-size: 0.8rem;
+  /* max-width: 15ch; */
+  max-width: 82ch;
+  margin: 6rem auto 3rem auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.back {
+  font-size: 0.8rem;
+  /* max-width: 15ch; */
+  max-width: 82ch;
+  margin: 1rem auto 3rem auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* .api {
+  max-width: 66ch;
+  margin: -1rem auto 1rem auto;
+}
+.proj {
+  max-width: 66ch;
+  margin: -1rem auto 3rem auto;
+} */
+
+/* .error {
   background-color: #fcd1d1;
   border-color: #940a0a;
 }
@@ -108,6 +150,6 @@ a:focus {
   content: "error: ";
   text-transform: capitalize;
   font-weight: 800;
-}
+} */
 
 /*# sourceMappingURL=styles.css.map */

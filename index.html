@@ -8,58 +8,152 @@
   </head>
 
   <body>
-    <h1>Keeping it Sassy</h1>
-    <h2>Step 1</h2>
+    <h1>Creating a standard project file structures</h1>
+    <h2>Front-end considerations</h2>
     <img src="https://bit.ly/3VUzJ7g" alt="blue print" />
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta erat
-      nec ipsum volutpat ultrices. Pellentesque ac mi lobortis,
-      <a href="">tincidunt purus</a> eu, gravida enim. Vestibulum pharetra a
-      arcu ac suscipit. Ut et lorem dui. Donec non vehicula orci. Nunc non
-      ornare mi, ac aliquam risus.
+      Sometimes the framework you use is more opinionated about the folder
+      structure and naming conventions. When your project has less
+      <a href="">strict guidelines</a> on structure, then you can have fun
+      making up your own. Here is a pretty common front-end setup for less
+      opinionated frameworks, like React.
     </p>
-    <p class="success">You did it!</p>
-    <p>
-      Ut maximus id erat et mollis. Aenean sit amet fringilla augue. Donec
-      convallis vel nibh vitae porttitor. Phasellus elementum nibh at erat
-      semper consectetur. Praesent convallis iaculis mauris, sit amet egestas
-      nunc gravida in. Donec dapibus mattis nibh, sed iaculis libero blandit et.
+    <p class="warning">
+      I’ll use examples in React and TypeScript throughout when discussing the
+      front-end.
     </p>
-    <h2>Step 2</h2>
+    <p class="react">
+      <code>
+        |__.ciCdConfig <br />
+        |____config.yaml <br />
+        |__src <br />
+        |____assets <br />
+        |______svgs <br />
+        |______pngs <br />
+        |______jpgs <br />
+        |____auth <br />
+        |______LoginModal.tsx <br />
+        |______MfaOptions.tsx <br />
+        |____components <br />
+        |______Modal.tsx <br />
+        |______Table.tsx <br />
+        |____hooks <br />
+      </code>
+      <code>
+        |______useAuth.tsx <br />
+        |______useUpdate.tsx <br />
+        |____layouts <br />
+        |______AuthedLayout.tsx <br />
+        |______RestrictedLayout.tsx <br />
+        |____pages <br />
+        |______Login.tsx <br />
+        |______settings <br />
+        |________UserProfileSettings.tsx <br />
+        |____tests <br />
+        |______Modal.test.tsx <br />
+        |______UserProfileSettings.test.tsx <br />
+        |____utils <br />
+      </code>
+      <code>
+        |______theme.ts <br />
+        |____App.tsx <br />
+        |____index.tsx <br />
+        |____Routes.ts <br />
+        |____serviceWorker.ts <br />
+        |__.env <br />
+        |__.eslintrc.json <br />
+        |__.gitignore <br />
+        |__.prettierrc <br />
+        |__package.json <br />
+        |__package-lock.json <br />
+        |__README.md <br />
+        |__tsconfig.json <br />
+      </code>
+    </p>
+    <h2>Back-end considerations</h2>
     <img src="https://bit.ly/3F4vd0f" alt="crane" />
     <p>
-      Aenean non lorem tincidunt, vulputate nibh et, convallis felis. Donec at
-      tristique sem. Aenean id leo non lectus hendrerit sodales. Maecenas
-      vulputate scelerisque dignissim. Integer purus nisl, blandit in odio a,
-      gravida interdum velit. Etiam consectetur risus ante, vel pulvinar felis
-      eleifend ut. Phasellus nec tellus vitae sem semper ultrices at et ligula.
+      On the back-end, you’ll likely be more concerned with authentication and
+      authorization for the data users have access to in the app and how you get
+      and transfer that data to various places.
     </p>
-    <p class="warning">Don't press the big red button</p>
+
+    <p class="warning">
+      I’ll use examples in React and TypeScript throughout when discussing the
+      front-end.
+    </p>
     <p>
-      Proin pharetra, urna et sagittis lacinia, quam metus vulputate eros, ac
-      congue quam leo suscipit est. Vestibulum ante ipsum primis in faucibus
-      <a href="">orci luctus</a> et ultrices posuere cubilia curae; Vestibulum
-      nec suscipit ipsum. Vestibulum dapibus, neque vel lacinia mattis, magna
-      sapien hendrerit justo, sed laoreet sapien enim quis mauris.
+      REST APIs <br />
+      When it comes to REST, most of your development will happen inside of a
+      framework like Express, Next, Nest, or any of the other popular
+      frameworks.
     </p>
-    <h2>Step 3</h2>
+    <p>
+      Microservices <br />
+
+      With microservices, you have a lot of independently running functions that
+      get deployed as their own app or service. You don’t have to follow uniform
+      conventions across microservices. You could have one
+      <a href="">microservice built</a> with Express, another built with Nest,
+      and another built in a different language like Python or Go. Because these
+      projects are small, you can keep the structure simple, similar to this.
+    </p>
+    <p>
+      GraphQL <br />
+      It’s commonly used when there are complex data structures that need to be
+      displayed in the front-end. Although you’ll likely see it used to replace
+      REST APIs as well.
+    </p>
+    <p class="back">
+      <code>
+        |__src <br />
+        |____common <br />
+        |____db <br />
+        |______models <br />
+        |______migrations <br />
+        |____services <br />
+        |__jobs <br />
+        |__tests <br />
+      </code>
+
+      <code>
+        |__api <br />
+        |____users <br />
+        |______getUserProfile.ts <br />
+        |______updateUserProfile.ts <br />
+        |______userProfiles.ts <br
+      /></code>
+
+      <code>
+        |__src <br />
+        |____resolvers <br />
+        |______users.ts <br />
+        |______accounts.ts <br />
+        |______products.ts <br />
+        |____types <br />
+        |______users.sdl.ts <br />
+        |______accounts.sdl.ts <br />
+        |______products.sdl.ts <br />
+      </code>
+    </p>
+    <h2>Types of projects</h2>
     <img src="https://bit.ly/3N42oD1" alt="wrong way" />
     <p>
-      Nullam ut auctor nisi. Vestibulum pretium vitae erat et hendrerit. Donec
-      velit ipsum, fringilla sed aliquam non, tincidunt a mauris. Mauris sit
-      amet diam lacus. Donec gravida felis nec ligula ultricies, et molestie
-      tellus tristique.
+      Organizing the core folder structure in a way that’s more specific to the
+      type of project you’re working on can also be very helpful. An app built
+      around FinTech will have different priorities and goals than an app built
+      around recommending products to a user.
     </p>
-    <p class="error">Mistakes have been made</p>
+    <p class="warning">
+      I’ll use examples in React and TypeScript throughout when discussing the
+      front-end.
+    </p>
     <p>
-      Vestibulum interdum eleifend suscipit. Nullam imperdiet dignissim nulla,
-      et mattis erat dignissim ut. Proin dui felis, venenatis sit amet lacus at,
-      commodo elementum dolor. Vestibulum et justo eu est pharetra pulvinar.
-      Duis fermentum iaculis velit, in hendrerit metus efficitur vel. Fusce
-      vitae mollis nisl. Fusce eu viverra erat. Vivamus nunc risus, consectetur
-      at eros ac, bibendum viverra massa. Aliquam metus lacus, condimentum in
-      ligula eget, molestie faucibus odio. Integer eros tellus, tristique non
-      elementum eget, congue scelerisque quam.
+      There’s different functionality you need to focus on depending on the
+      exact type of app you’re working on. Some will have to comply with
+      regulations like HIPAA or PCI and that can drive a lot of development
+      decisions. How you manage data can also effect the way you handle your
+      code choices.
     </p>
   </body>
 </html>
