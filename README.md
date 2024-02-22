@@ -1,5 +1,5 @@
 # pre-processors
 
 <p align="center">
-<img src="./images/page.png" width="70%"/>
+<img src="./images/process.jpeg" width="70%"/>
 </p>
